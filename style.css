@@ -115,3 +115,11 @@ body {
   font-weight: 600;
   opacity: 0.5;
 }
+.prompt{
+  display:none;
+}
+@media only screen and (max-width: 767px) {
+  .prompt{
+    display:block;
+  }
+}
