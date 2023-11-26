@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon/favicon.png" type="image/x-icon" />
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drawing app</title>
+  </head>
+  <body>
+    <div class="side-panel">
+      <div class="flex-icon">
+        <i class="fa-solid fa-lg color-mode fa-circle-half-stroke"></i>
+      </div>
+      <div class="flex-icon">
+        <i class="fa-solid pencil fa-lg fa-pencil"></i>
+      </div>
+      <div class="flex-icon">
+        <i id="undo" class="fa-solid fa-lg fa-rotate-left"></i>
+      </div>
+      <div class="flex-icon">
+        <i id="redo" class="fa-solid fa-lg fa-rotate-right"></i>
+      </div>
+      <div class="flex-icon">
+        <i id="palatte" class="fa-solid fa-lg fa-palette"></i>
+      </div>
+      <div class="flex-icon">
+        <i id="clear" class="fa-regular fa-lg fa-square"></i>
+      </div>
+      <div class="flex-icon">
+        <i id="eraser" class="fa-solid fa-lg fa-eraser"></i>
+      </div>
+    </div>
+    <div class="color-picker-container toggle">
+      <div class="color-picker">
+        <div style="background-color: #000" class="flex-item-color"></div>
+        <div style="background-color: #343a40" class="flex-item-color"></div>
+        <div style="background-color: #0766ad" class="flex-item-color"></div>
+        <div style="background-color: #846358" class="flex-item-color"></div>
+        <div style="background-color: #0c8599" class="flex-item-color"></div>
+        <div style="background-color: #1971c2" class="flex-item-color"></div>
+        <div style="background-color: #6741d9" class="flex-item-color"></div>
+        <div style="background-color: #099268" class="flex-item-color"></div>
+        <div style="background-color: #f08c00" class="flex-item-color"></div>
+        <div style="background-color: #e8590c" class="flex-item-color"></div>
+        <div style="background-color: #e03131" class="flex-item-color"></div>
+        <div style="background-color: #c2255c" class="flex-item-color"></div>
+      </div>
+      <p>Hex code</p>
+      <input placeholder="#ffffff" id="hexcode" type="text" />
+    </div>
+    <input
+      value="3"
+      min="1"
+      max="12"
+      class="toggle pencil-width"
+      type="range"
+    />
+
+    <canvas id="canvas"></canvas>
+    <script src="canvas.js"></script>
+  </body>
+</html>

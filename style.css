@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+#canvas {
+  cursor: crosshair;
+}
+
+.side-panel {
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* height: 70%; */
+  width: 2.5%;
+  background-color: #f4bf96;
+  position: fixed;
+  left: 10px;
+  top: 50px;
+  border-radius: 10px;
+}
+.side-panel:hover {
+  transition-duration: 0.4s;
+  box-shadow: -4px 2px 6px #ce5a67;
+}
+.flex-icon {
+  cursor: pointer;
+  color: #ce5a67;
+}
+.pencil-width {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  cursor: pointer;
+}
+
+.toggle {
+  display: none;
+}
+#canvas {
+  --dot-bg: #fcf5ed;
+  --dot-color: black;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+/* color picker */
+.color-picker-container {
+  width: 120px;
+  height: 146px;
+  background: #f4bf96;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  border-radius: 8px;
+  text-align: center;
+}
+.color-picker-container:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0px 4px 6px #ce5a67;
+}
+.color-picker {
+  border-radius: 8px;
+  width: 100%;
+  height: 90px;
+  background-color: #f4bf96;
+  padding: 8px 5px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+}
+.flex-item-color {
+  height: 23px;
+  width: 23px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.color-picker-container p {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  margin-top: 3px;
+  color: #ce5a67;
+}
+#hexcode {
+  border: none;
+  width: 90%;
+  margin-top: 3px;
+  height: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  outline: none;
+}
+#hexcode::placeholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  opacity: 0.5;
+}
